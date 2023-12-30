@@ -15,7 +15,6 @@ print(min(nums))
 print(max(nums))
 print(sum(nums))
 
-
 # 4.6
 for i in range(1, 20, 2):
     print(i, end=" ")
