@@ -1,10 +1,14 @@
 # testing my while loop skills
 
-sandwich_orders = ["tuna", "mandarina", "marina", "chocolate"]
+sandwich_orders = ["tuna","pastrami", "mandarina","pastrami",  "marina", "pastrami", "chocolate"]
 finished_sandwiches = []
 
 flag = True
+print("\nNo pastrami\n\n")
 
+while "pastrami" in sandwich_orders:
+    sandwich_orders.remove("pastrami")
+    
 while flag:
     sandwich = sandwich_orders.pop()
     print(f"I made youn a {sandwich.title()} sandwich.")
