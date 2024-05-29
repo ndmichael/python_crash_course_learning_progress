@@ -26,3 +26,14 @@ class Car:
     def increment_odometer(self, miles):
         """Add the given amount to the odometer reading"""
         self.odometer_reading += miles
+
+
+class ElectricalCar(Car):
+    def __init__(self, make, model, year):
+        """Initialize attributes of the parent class"""
+        super().__init__(make, model, year)
+        self.battery_size = 40
+
+
+my_e1 = ElectricalCar('nissan', 'leaf', '2024')
+print(my_e1.get_descriptive_name())
