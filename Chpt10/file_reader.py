@@ -1,6 +1,13 @@
 from pathlib import Path
 
 path = Path('pi_digits.txt')
-content = path.read_text()
-print(content)
-print(f'current directory {Path.cwd()}')
+lines = path.read_text().splitlines()
+
+pi_string = ''
+
+for line in lines:
+    pi_string += line
+
+print(pi_string)
+print(len(pi_string))
+# print(f'current directory {Path.cwd()}')
