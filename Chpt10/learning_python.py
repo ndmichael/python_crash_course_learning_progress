@@ -7,7 +7,9 @@ lines = content.splitlines()
 pi_string = ''
 
 for line in lines:
-    pi_string += line + ' '
+    line = line.replace('python', 'C')
+    pi_string += line + '\n'
+
 
 print(lines)
 print(pi_string)
