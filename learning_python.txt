@@ -1,0 +1,10 @@
+In python I can create variables
+In python I can create list
+In python I can analyze list using it's many functions
+In python I can work with Tuples
+In python I can work with Dictionaries
+In python I can take user inputs
+In python I can create functions
+In python I can work with classes
+In python I can create modules
+In python I can read files
