@@ -6,7 +6,7 @@ def count_word(path):
     try:
         content = path.read_text(encoding='utf-8')
         
-    except:
+    except FileNotFoundError:
         print("File not found.")
     else:
         lines = content.split()
