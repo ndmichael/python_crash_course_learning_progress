@@ -1,6 +1,5 @@
 from pathlib import Path
 
-path = Path("alice.txt")
 
 def count_word(path):
     """Code to words in a file"""
@@ -14,4 +13,9 @@ def count_word(path):
         total_words  = len(lines)
         print(f"The file {path} has about {total_words} words")
 
-count_word(path)
+
+filenames = ['alice.txt', 'pi_digits.txt', 'mob.txt', 'pi_millions.txt']
+
+for file in filenames:
+    path = Path(file)
+    count_word(path)
