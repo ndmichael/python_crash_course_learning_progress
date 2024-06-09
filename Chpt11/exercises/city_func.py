@@ -1,6 +1,9 @@
-def city_country(city: str, country: str)-> str:
+def city_country(city: str, country: str, population: str='')-> str:
     """Returs a neatly formatted location"""
-    location = f"{city}, {country}"
+    if population:
+        location = f"{city}, {country} - population {population}"
+    else:
+        location = f"{city}, {country}"
     return location.title()
 
 
