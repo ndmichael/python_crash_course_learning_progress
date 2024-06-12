@@ -6,7 +6,7 @@ from survey import AnonymousSurvey
 def language_survey():
     '''would be available for all test functions'''
     question = "What language did you first learn?"
-    lansuage_survey = AnonymousSurvey(question)
+    language_survey = AnonymousSurvey(question)
     
     return language_survey
 
