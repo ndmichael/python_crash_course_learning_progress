@@ -13,7 +13,6 @@ while True:
     point_numbers = list(range(rw.num_points))
     plt.plot(rw.x_values, rw.y_values, c='purple', linewidth=5)
 
-
     plt.show()
 
     keep_running = input("Make another walk? {y/n}: ")
