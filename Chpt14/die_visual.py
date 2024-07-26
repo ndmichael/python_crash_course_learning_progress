@@ -17,6 +17,8 @@ for value in range(1, die.num_sides + 1):
     frequency = results.count(value)
     frequencies[value] = frequency
 
+
+# Visualize result
 hist = pygal.Bar()
 hist.force_uri_protocol = 'http'
 
