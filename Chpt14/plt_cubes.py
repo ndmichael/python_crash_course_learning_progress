@@ -11,7 +11,7 @@ plt.xlabel("Cube numbers", fontsize=14)
 plt.ylabel("Cubes values", fontsize=14)
 
 #Set size of tick label
-plt.tick_params(axis="both", labelsize=14)
+plt.tick_params(axis="both", labelsize=8)
 
 #Set the range of each axis
 # plt.axis([0, 5100, 0, 5100000])
