@@ -24,8 +24,9 @@ for row in reader:
 #Plot the highs and lows temperature
 plt.style.use('seaborn-v0_8')
 fig, ax = plt.subplots()
-ax.plot(dates, highs, color="red")
-ax.plot(dates, lows, color="seagreen")
+ax.plot(dates, highs, color="red", alpha=0.5)
+ax.plot(dates, lows, color="seagreen", alpha=0.5)
+ax.fill_between(dates, highs, lows, facecolor="blue", alpha=0.1)
 
 ax.set_title("Daily high and low temperatures 2021", fontweight="bold", fontsize=24)
 ax.set_xlabel("", fontsize="16")
