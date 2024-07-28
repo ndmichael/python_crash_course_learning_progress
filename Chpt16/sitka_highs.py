@@ -10,12 +10,14 @@ lines = path.read_text().splitlines()
 reader = csv.reader(lines)
 header_row = next(reader)
 
-dates, highs = [], []
+dates, highs, lows = [], [], []
 for row in reader:
     date = dt.strptime(row[2], "%Y-%m-%d")
     high = int(row[4])
+    low = int(row[5])
     dates.append(date)
     highs.append(high)
+    lows.append(low)
     
 
 
@@ -23,8 +25,9 @@ for row in reader:
 plt.style.use('seaborn-v0_8')
 fig, ax = plt.subplots()
 ax.plot(dates, highs, color="red")
+ax.plot(dates, lows, color="seagreen")
 
-ax.set_title("Daily high temperatures, July 2021", fontweight="bold", fontsize="20")
+ax.set_title("Daily high and low temperatures 2021", fontweight="bold", fontsize=24)
 ax.set_xlabel("", fontsize="16")
 ax.set_ylabel("Temperature (F)", fontsize="16")
 
