@@ -12,7 +12,8 @@ reader = csv.reader(lines)
 header_row = next(reader)
 
 dates, highs, lows = [], [], []
-for row in reader:
+for row in header_row:
+    # print(row[0])
     date = dt.strptime(row[2], "%Y-%m-%d")
     high = int(row[4])
     low = int(row[5])
