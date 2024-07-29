@@ -13,7 +13,7 @@ header_row = next(reader)
 dates, rainfalls = [], []
 
 for row in reader:
-    date = dt.strptime(row[2], '%Y-%M-%d')
+    date = dt.strptime(row[2], '%Y-%m-%d')
     try:
         rainfall = float(row[5])
     except ValueError:
@@ -22,8 +22,9 @@ for row in reader:
         dates.append(date)
         rainfalls.append(rainfall)
 
+plt.style.use('seaborn-v0_8')
 fig, ax = plt.subplots()
-ax.plot(dates, rainfalls, color="navy")
+ax.bar(dates, rainfalls, color="navy")
 
 ax.set_title("Death Valley Rainfalls")
 ax.set_ylabel("Rainfalls")
