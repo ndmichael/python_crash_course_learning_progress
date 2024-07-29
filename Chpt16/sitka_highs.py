@@ -5,6 +5,7 @@ from datetime import datetime as dt
 
 
 path = Path("weather_data/sitka_weather_2021_simple.csv")
+
 lines = path.read_text().splitlines()
 
 reader = csv.reader(lines)
