@@ -10,12 +10,19 @@ all_eq_data = json.loads(contents)
 all_eq_dicts = all_eq_data['features']
 
 #Read mag properties
-mags = []
+mags, lons, lats = [], [], []
+
 for eq_dict in all_eq_dicts:
     mag = eq_dict['properties']['mag']
+    lon = eq_dict['geometry']['coordinates'][0]
+    lat = eq_dict['geometry']['coordinates'][1]
     mags.append(mag)
+    lons.append(lon)
+    lats.append(lat)
 
 print(mags[:10])
+print(lons[:10])
+print(lats[:10])
 print(len(all_eq_dicts))
 
 #Create a more readable versions of the data file
