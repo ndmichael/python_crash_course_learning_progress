@@ -11,13 +11,15 @@ all_eq_data = json.loads(contents)
 all_eq_dicts = all_eq_data['features']
 
 #Read mag properties
-mags, lons, lats = [], [], []
+mags, lons, lats, eq_titles = [], [], [], []
 
 for eq_dict in all_eq_dicts:
     mag = eq_dict['properties']['mag']
+    title = eq_dict["properties"]['title']
     lon = eq_dict['geometry']['coordinates'][0]
     lat = eq_dict['geometry']['coordinates'][1]
     mags.append(mag)
+    eq_titles.append(title)
     lons.append(lon)
     lats.append(lat)
 
@@ -32,7 +34,8 @@ fig = px.scatter_geo(
     color=mags,
     color_continuous_scale='Viridis',
     labels={'color': 'Magnitude'},
-    projection='natural earth1'
+    projection='natural earth1',
+    hover_name= eq_titles,
 
 )
 fig.show()
