@@ -14,14 +14,10 @@ all_eq_dicts = all_eq_data['features']
 mags, lons, lats, eq_titles = [], [], [], []
 
 for eq_dict in all_eq_dicts:
-    mag = eq_dict['properties']['mag']
-    title = eq_dict["properties"]['title']
-    lon = eq_dict['geometry']['coordinates'][0]
-    lat = eq_dict['geometry']['coordinates'][1]
-    mags.append(mag)
-    eq_titles.append(title)
-    lons.append(lon)
-    lats.append(lat)
+    mags.append(eq_dict['properties']['mag'])
+    eq_titles.append(eq_dict["properties"]['title'])
+    lons.append(eq_dict['geometry']['coordinates'][0])
+    lats.append(eq_dict['geometry']['coordinates'][1])
 
 # print(mags[:10])
 # print(lons[:10])
