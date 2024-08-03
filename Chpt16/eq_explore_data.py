@@ -9,6 +9,7 @@ all_eq_data = json.loads(contents)
 
 #Read all data from the dataset
 all_eq_dicts = all_eq_data['features']
+title = all_eq_data['metadata']['title']
 
 #Read mag properties
 mags, lons, lats, eq_titles = [], [], [], []
@@ -19,12 +20,7 @@ for eq_dict in all_eq_dicts:
     lons.append(eq_dict['geometry']['coordinates'][0])
     lats.append(eq_dict['geometry']['coordinates'][1])
 
-# print(mags[:10])
-# print(lons[:10])
-# print(lats[:10])
-# print(len(all_eq_dicts))
-
-title = "Global Earthquakes"
+# title = "Global Earthquakes"
 fig = px.scatter_geo(
     lat=lats, lon=lons, size=mags, title=title,
     color=mags,
